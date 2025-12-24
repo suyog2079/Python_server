@@ -170,8 +170,9 @@ class CalibrationServer:
                 for line in data_lines:
                     try:
                         parts = line.strip().split(',')
-                        if len(parts) >= 5:
+                        if len(parts) >= 6:
                             del_t = float(parts[5])
+                            print(del_t);
                             del_t_values.append(del_t)
                     except (ValueError, IndexError):
                         continue
@@ -215,8 +216,8 @@ class CalibrationServer:
             for line in data_lines:
                 try:
                     parts = line.strip().split(',')
-                    if len(parts) >= 5:
-                        del_t = float(parts[4])  # del_t is the 5th field (index 4)
+                    if len(parts) >= 6:
+                        del_t = float(parts[5])  # del_t is the 5th field (index 4)
                         writer.writerow([del_t])
                 except (ValueError, IndexError) as e:
                     continue
