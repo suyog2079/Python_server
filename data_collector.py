@@ -171,7 +171,7 @@ class CalibrationServer:
                     try:
                         parts = line.strip().split(',')
                         if len(parts) >= 5:
-                            del_t = float(parts[4])
+                            del_t = float(parts[5])
                             del_t_values.append(del_t)
                     except (ValueError, IndexError):
                         continue
