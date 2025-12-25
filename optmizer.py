@@ -7,7 +7,7 @@ import csv
 
 # Constants
 SPEED_OF_SOUND = 343.0  # m/s
-MIC_DISTANCES = [0.055, 0.063, 0.055]  # distance between mics in each array
+MIC_DISTANCES = [0.055, 0.063, 0.063]  # distance between mics in each array
 
 
 def save_to_csv(filename, h, k, theta, d):
